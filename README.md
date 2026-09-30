@@ -27,12 +27,14 @@
 
 <sub>이 목록은 매일 아침 GitHub Actions가 [블로그 RSS](https://seok05.github.io/feed.xml)에서 가져다 둡니다.</sub>
 
-### 📊 잔디와 기록
+### 📊 기록 장부
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Seok05&show_icons=true&hide_border=true&bg_color=13161c&title_color=b6b1ff&text_color=c3c6cd&icon_color=e5a34f&locale=kr">
-  <img alt="GitHub 통계" height="160" src="https://github-readme-stats.vercel.app/api?username=Seok05&show_icons=true&hide_border=true&bg_color=fffdf8&title_color=4038c7&text_color=474135&icon_color=b45309&locale=kr">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img alt="지난 1년 기여, 블로그 글 수, 마지막 기록 날짜" src="assets/stats-light.svg" width="520">
 </picture>
+
+<sub>이 카드도 매일 아침 Actions가 직접 그립니다. 남의 서버 없이요.</sub>
 
 ---
 

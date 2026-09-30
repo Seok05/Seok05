@@ -1,4 +1,4 @@
-name: 최근 글 갱신
+name: 아침 갱신
 
 on:
   schedule:
@@ -17,9 +17,11 @@ jobs:
         with:
           node-version: 20
       - run: node scripts/update-blog.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 바뀐 게 있으면 커밋
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --cached --quiet || { git commit -m "최근 글 갱신"; git push; }
+          git add README.md assets/stats-*.svg
+          git diff --cached --quiet || { git commit -m "아침 갱신: 최근 글·기록 장부"; git push; }
