@@ -41,9 +41,9 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=769ca896"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=be6c26df" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=4b1802df"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=2e01a370" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=b863f05a"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=13b753f8" width="100%"></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=edd744a9"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=cb3d79cc" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-stats-dark.svg?v=a5886e52"><img alt="GitHub stats" src="assets/pin-stats-light.svg?v=40d8e2c5" width="50%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=ba0922d5"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=6943174f" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=03687e60"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=d9520327" width="50%"></picture></p>
 
 ### Latest blog posts
 

@@ -4,7 +4,7 @@
       - project cards from assets/projects.json (+ per-repo languages)
       - most used languages from assets/languages.json
         (both JSON files come from scripts/languages.mjs, run by hand)
-      - contribution skyline, commits by time of day, GitHub stats
+      - contribution skyline, commits by time of day, contributions by weekday
    3) every README image URL gets ?v=<content hash>, so a changed card is
       never served stale from the browser cache.
    Grid: half cards are 452 wide, full cards 904, all with a 10px inset,
@@ -205,19 +205,9 @@ if (langData) {
 /* 2c) activity cards (need the token) */
 if (!ONLY_LANGUAGES && token) {
   const d1 = await gql(`query{user(login:"${LOGIN}"){id
-    contributionsCollection{totalCommitContributions restrictedContributionsCount
-      contributionCalendar{totalContributions weeks{contributionDays{date weekday contributionCount}}}}
-    pullRequests{totalCount} issues{totalCount}
-    repositoriesContributedTo(contributionTypes:[COMMIT,PULL_REQUEST,ISSUE,REPOSITORY]){totalCount}
-    repositories(first:50,ownerAffiliations:OWNER,privacy:PUBLIC){nodes{stargazerCount name}}}}`);
+    contributionsCollection{contributionCalendar{totalContributions weeks{contributionDays{date weekday contributionCount}}}}
+    repositories(first:50,ownerAffiliations:OWNER,privacy:PUBLIC){nodes{name}}}}`);
   const u = d1.user;
-  const stats = {
-    stars: u.repositories.nodes.reduce((a, r) => a + r.stargazerCount, 0),
-    commits: u.contributionsCollection.totalCommitContributions + u.contributionsCollection.restrictedContributionsCount,
-    prs: u.pullRequests.totalCount,
-    issues: u.issues.totalCount,
-    contributedTo: u.repositoriesContributedTo.totalCount,
-  };
   const repoQ = u.repositories.nodes
     .map((r, i) => `r${i}: repository(owner:"${LOGIN}",name:"${r.name}"){defaultBranchRef{target{... on Commit{history(first:100,author:{id:"${u.id}"}){nodes{committedDate}}}}}}`)
     .join("\n");
@@ -256,26 +246,38 @@ if (!ONLY_LANGUAGES && token) {
     const foot = `<text x="${PAD}" y="${H2 - 18}" font-size="11" fill="${C.faint}" font-family="${SANS}">public repos · author-local commit time</text>`;
     writeFileSync(`assets/pin-time-${suffix}.svg`, card(C, W2, H2, { title: TITLES[top], glyph: top < 2 ? "sun" : "moon" }, rows + foot));
 
-    /* GitHub stats */
-    const S2 = [
-      ["star", "Total stars", stats.stars],
-      ["git-commit", "Commits (past year)", stats.commits],
-      ["git-pull-request", "Pull requests", stats.prs],
-      ["issue-opened", "Issues", stats.issues],
-      ["repo", "Contributed to", stats.contributedTo],
-    ];
-    const rows2 = S2.map(([g, label, n], i) => {
-      const y = 88 + i * 31;
-      return (
-        icon(g, PAD, y - 13, C.muted) +
-        `<text x="${PAD + 26}" y="${y}" font-size="14.5" font-family="${MONO}" fill="${C.muted}">${label}</text>` +
-        `<line x1="${PAD + 216}" y1="${y - 5}" x2="${R2 - 44}" y2="${y - 5}" stroke="${C.track}" stroke-width="1.5"/>` +
-        `<text x="${R2}" y="${y}" font-size="16" font-family="${MONO}" fill="${C.ink}" font-weight="700" text-anchor="end">${n.toLocaleString("en-US")}</text>`
-      );
-    }).join("");
-    writeFileSync(`assets/pin-stats-${suffix}.svg`, card(C, W2, H2, { title: `${LOGIN}'s GitHub Stats`, glyph: "mark-github" }, rows2));
+    /* contributions by day of week: the calendar counts private work too,
+       so this card has real numbers even though the time card sees only
+       public repos */
+    const DAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const DAYS = ["Sundays", "Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays", "Saturdays"];
+    const byDay = [0, 0, 0, 0, 0, 0, 0];
+    for (const w of u.contributionsCollection.contributionCalendar.weeks)
+      for (const d of w.contributionDays) byDay[d.weekday] += d.contributionCount;
+    const order = [1, 2, 3, 4, 5, 6, 0]; // Monday first
+    const peak = Math.max(...byDay);
+    const topDay = byDay.indexOf(peak);
+    const plotX = PAD, plotW = R2 - PAD, base = 176, maxH = 98, colW = plotW / 7, barW = 26;
+    const cols = order
+      .map((wd, i) => {
+        const n = byDay[wd];
+        const on = peak > 0 && wd === topDay;
+        const h = peak ? Math.max(3, Math.round((n / peak) * maxH)) : 3;
+        const x = plotX + i * colW + (colW - barW) / 2;
+        const cx = (x + barW / 2).toFixed(1);
+        return (
+          `<rect x="${x.toFixed(1)}" y="${base - maxH}" width="${barW}" height="${maxH}" rx="4" fill="${C.track}"/>` +
+          `<rect x="${x.toFixed(1)}" y="${base - h}" width="${barW}" height="${h}" rx="4" fill="${on ? C.accent : C.faint}"/>` +
+          `<text x="${cx}" y="${base - h - 7}" font-size="13" font-family="${MONO}" fill="${on ? C.ink : C.muted}" font-weight="${on ? 700 : 400}" text-anchor="middle">${n}</text>` +
+          `<text x="${cx}" y="${base + 20}" font-size="13" font-family="${MONO}" fill="${on ? C.ink : C.muted}" font-weight="${on ? 600 : 400}" text-anchor="middle">${DAY[wd]}</text>`
+        );
+      })
+      .join("");
+    const footW = `<text x="${PAD}" y="${H2 - 18}" font-size="11" fill="${C.faint}" font-family="${SANS}">past year · all contributions, private included</text>`;
+    const titleW = peak ? `Most productive on ${DAYS[topDay]}` : "No contributions yet";
+    writeFileSync(`assets/pin-week-${suffix}.svg`, card(C, W2, H2, { title: titleW, glyph: "calendar" }, cols + footW));
   }
-  console.log(`time + stats cards: ${buckets.join("/")}, commits ${stats.commits}`);
+  console.log(`time + weekday cards: ${buckets.join("/")}`);
 
   /* contribution skyline: recent weeks as isometric bars, plus streaks.
      The profile page already shows the full-year calendar, so this zooms in
