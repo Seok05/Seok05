@@ -62,7 +62,27 @@
   <img alt="지난 1년 기여, 블로그 글 수, 마지막 기록 날짜" src="assets/stats-light.svg" width="520">
 </picture>
 
-<sub>3D 잔디도, 이 카드도 매일 아침 Actions가 직접 그립니다. 남의 서버 없이요.</sub>
+
+### 📌 책상 위 핀
+
+<table>
+  <tr>
+    <td width="50%">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg">
+        <img alt="시간대별 커밋" src="assets/pin-time-light.svg" width="100%">
+      </picture>
+    </td>
+    <td width="50%">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/pin-stats-dark.svg">
+        <img alt="GitHub 종합 스탯" src="assets/pin-stats-light.svg" width="100%">
+      </picture>
+    </td>
+  </tr>
+</table>
+
+<sub>3D 잔디도, 이 카드들도 매일 아침 Actions가 직접 그립니다. 남의 서버 없이요.</sub>
 
 ---
 

@@ -29,5 +29,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/stats-*.svg profile-3d-contrib
+          git add README.md assets/*.svg profile-3d-contrib
           git diff --cached --quiet || { git commit -m "아침 갱신: 최근 글·기록 장부·3D 잔디"; git push; }
