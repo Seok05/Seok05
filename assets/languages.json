@@ -1,18 +1,18 @@
 {
   "asOf": "2026-09-30",
   "repos": 4,
-  "totalBytes": 2724077,
+  "totalBytes": 2732002,
   "languages": [
     {
       "name": "TypeScript",
       "bytes": 1992908,
-      "pct": 73.2,
+      "pct": 72.9,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "bytes": 313100,
-      "pct": 11.5,
+      "bytes": 320413,
+      "pct": 11.7,
       "color": "#f1e05a"
     },
     {
@@ -47,8 +47,8 @@
     },
     {
       "name": "Shell",
-      "bytes": 3737,
-      "pct": 0.1,
+      "bytes": 4349,
+      "pct": 0.2,
       "color": "#89e051"
     }
   ]
