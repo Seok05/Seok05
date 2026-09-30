@@ -43,7 +43,7 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=4b1802df"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=2e01a370" width="100%"></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=f39834fb"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=ec9de0b3" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-stats-dark.svg?v=a5886e52"><img alt="GitHub stats" src="assets/pin-stats-light.svg?v=40d8e2c5" width="50%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=edd744a9"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=cb3d79cc" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-stats-dark.svg?v=a5886e52"><img alt="GitHub stats" src="assets/pin-stats-light.svg?v=40d8e2c5" width="50%"></picture></p>
 
 ### Latest blog posts
 
