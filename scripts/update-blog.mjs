@@ -43,7 +43,7 @@ console.log(`blog: ${items.length} posts`);
 function card(C, w, h, title, body) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}">
   <rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="6" fill="${C.bg}" stroke="${C.border}"/>
-  <text x="24" y="38" font-size="14" font-weight="600" fill="${C.accent}" font-family="${SANS}">${title}</text>
+  <text x="26" y="46" font-size="19" font-weight="600" fill="${C.accent}" font-family="${SANS}">${title}</text>
   ${body}\n</svg>\n`;
 }
 
@@ -90,18 +90,18 @@ for (const [suffix, C] of Object.entries(THEMES)) {
     const n = buckets[i];
     const pct = (Math.round((n / total) * 1000) / 10).toFixed(1);
     const w = Math.max(3, Math.round((n / Math.max(...buckets)) * 140));
-    const y = 74 + i * 30;
+    const y = 92 + i * 34;
     const on = i === top;
     return (
-      `<text x="24" y="${y}" font-size="12" font-family="${MONO}" fill="${on ? C.ink : C.muted}" font-weight="${on ? 600 : 400}">${label}</text>` +
-      `<text x="178" y="${y}" font-size="12" font-family="${MONO}" fill="${C.muted}" text-anchor="end">${n} commits</text>` +
-      `<rect x="192" y="${y - 10}" width="140" height="10" rx="2" fill="${C.track}"/>` +
-      `<rect x="192" y="${y - 10}" width="${w}" height="10" rx="2" fill="${on ? C.accent : C.faint}"/>` +
-      `<text x="416" y="${y}" font-size="12" font-family="${MONO}" fill="${on ? C.ink : C.faint}" text-anchor="end" font-weight="${on ? 600 : 400}">${pct}%</text>`
+      `<text x="26" y="${y}" font-size="14.5" font-family="${MONO}" fill="${on ? C.ink : C.muted}" font-weight="${on ? 600 : 400}">${label}</text>` +
+      `<text x="198" y="${y}" font-size="13.5" font-family="${MONO}" fill="${C.muted}" text-anchor="end">${n} commits</text>` +
+      `<rect x="210" y="${y - 12}" width="140" height="13" rx="3" fill="${C.track}"/>` +
+      `<rect x="210" y="${y - 12}" width="${w}" height="13" rx="3" fill="${on ? C.accent : C.faint}"/>` +
+      `<text x="414" y="${y}" font-size="13.5" font-family="${MONO}" fill="${on ? C.ink : C.faint}" text-anchor="end" font-weight="${on ? 600 : 400}">${pct}%</text>`
     );
   }).join("");
-  const note = `<text x="24" y="204" font-size="10" fill="${C.faint}" font-family="${SANS}">public repos · author-local commit time</text>`;
-  writeFileSync(`assets/pin-time-${suffix}.svg`, card(C, 440, 220, TITLES[top], rows + note));
+  const note = `<text x="26" y="226" font-size="11" fill="${C.faint}" font-family="${SANS}">public repos · author-local commit time</text>`;
+  writeFileSync(`assets/pin-time-${suffix}.svg`, card(C, 440, 244, TITLES[top], rows + note));
 
   const S2 = [
     ["Total Stars", stats.stars],
@@ -111,13 +111,13 @@ for (const [suffix, C] of Object.entries(THEMES)) {
     ["Contributed to", stats.contributedTo],
   ];
   const rows2 = S2.map(([label, n], i) => {
-    const y = 72 + i * 28;
+    const y = 90 + i * 32;
     return (
-      `<text x="24" y="${y}" font-size="12" font-family="${MONO}" fill="${C.muted}">${label}</text>` +
-      `<line x1="220" y1="${y - 4}" x2="380" y2="${y - 4}" stroke="${C.track}"/>` +
-      `<text x="416" y="${y}" font-size="12.5" font-family="${MONO}" fill="${C.ink}" font-weight="600" text-anchor="end">${n.toLocaleString("en-US")}</text>`
+      `<text x="26" y="${y}" font-size="14.5" font-family="${MONO}" fill="${C.muted}">${label}</text>` +
+      `<line x1="250" y1="${y - 5}" x2="372" y2="${y - 5}" stroke="${C.track}" stroke-width="1.5"/>` +
+      `<text x="414" y="${y}" font-size="16" font-family="${MONO}" fill="${C.ink}" font-weight="700" text-anchor="end">${n.toLocaleString("en-US")}</text>`
     );
   }).join("");
-  writeFileSync(`assets/pin-stats-${suffix}.svg`, card(C, 440, 220, `${LOGIN}'s GitHub Stats`, rows2));
+  writeFileSync(`assets/pin-stats-${suffix}.svg`, card(C, 440, 244, `${LOGIN}'s GitHub Stats`, rows2));
 }
 console.log(`cards: time ${buckets.join("/")}, commits ${stats.commits}, stars ${stats.stars}`);
