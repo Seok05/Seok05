@@ -8,6 +8,10 @@
    Layout: half cards are 452 wide and the full card is 904, both with a
    6px inset, so two half cards at 50% line up with one full card at 100%. */
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
+process.chdir(fileURLToPath(new URL("..", import.meta.url)));
+const ONLY_LANGUAGES = process.argv.includes("--languages");
 
 const LOGIN = "Seok05";
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
@@ -38,20 +42,22 @@ function card(C, w, h, title, body, note = "") {
   ${body}\n</svg>\n`;
 }
 
+if (!ONLY_LANGUAGES) {
 /* 1) latest posts */
-const xml = await (await fetch("https://seok05.github.io/feed.xml")).text();
-const unesc = (s) => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"');
-const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 5).map(([, it]) => {
-  const pick = (tag) => (it.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`)) || [])[1] || "";
-  const d = new Date(new Date(pick("pubDate")).getTime() + 9 * 3600 * 1000);
-  const date = d.toISOString().slice(0, 10);
-  return { title: unesc(pick("title")), link: pick("link"), date };
-});
-const mdEscape = (s) => s.replace(/([\[\]])/g, "\\$1");
-const list = items.map((p) => `- \`${p.date}\` [${mdEscape(p.title)}](${p.link})`).join("\n");
-const readme = readFileSync("README.md", "utf8");
-writeFileSync("README.md", readme.replace(/<!-- BLOG:START -->[\s\S]*?<!-- BLOG:END -->/, `<!-- BLOG:START -->\n${list}\n<!-- BLOG:END -->`));
-console.log(`posts: ${items.length}`);
+  const xml = await (await fetch("https://seok05.github.io/feed.xml")).text();
+  const unesc = (s) => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"');
+  const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 5).map(([, it]) => {
+    const pick = (tag) => (it.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`)) || [])[1] || "";
+    const d = new Date(new Date(pick("pubDate")).getTime() + 9 * 3600 * 1000);
+    const date = d.toISOString().slice(0, 10);
+    return { title: unesc(pick("title")), link: pick("link"), date };
+  });
+  const mdEscape = (s) => s.replace(/([\[\]])/g, "\\$1");
+  const list = items.map((p) => `- \`${p.date}\` [${mdEscape(p.title)}](${p.link})`).join("\n");
+  const readme = readFileSync("README.md", "utf8");
+  writeFileSync("README.md", readme.replace(/<!-- BLOG:START -->[\s\S]*?<!-- BLOG:END -->/, `<!-- BLOG:START -->\n${list}\n<!-- BLOG:END -->`));
+  console.log(`posts: ${items.length}`);
+}
 
 /* 2a) languages card (no token needed) */
 if (existsSync("assets/languages.json")) {
@@ -94,6 +100,7 @@ if (existsSync("assets/languages.json")) {
 }
 
 /* 2b) activity cards (need the token) */
+if (ONLY_LANGUAGES) process.exit(0);
 if (!token) {
   console.log("activity cards: no token, skipped");
   process.exit(0);

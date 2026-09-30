@@ -1,14 +1,16 @@
 /* Scans local clones of my repositories, public and private, and writes
    assets/languages.json (bytes of source per language). The daily Action
-   cannot read private repos, so this one is run by hand:
-
-     node scripts/languages.mjs ~/Desktop/EValue ~/Desktop/첫잔/cheotjan ~/Desktop/seok05.github.io .
+   cannot read private repos, so this one is run by hand, usually through
+   scripts/refresh-languages.sh. With no arguments it scans the default
+   clones below; pass repo paths to scan others instead.
 
    Build output, dependencies, lockfiles, SQL seed data and the blog's post
    content are left out, so the totals reflect code rather than artifacts. */
 import { execFileSync } from "node:child_process";
 import { existsSync, statSync, writeFileSync } from "node:fs";
+import { homedir } from "node:os";
 import { basename, extname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const LANG = {
   ".ts": "TypeScript", ".tsx": "TypeScript",
@@ -26,10 +28,19 @@ const COLOR = {
 const SKIP_DIR = /(^|\/)(node_modules|\.next|dist|build|coverage|\.expo|Pods)\//;
 const SKIP_FILE = /(^|\/)(package-lock\.json|pnpm-lock\.yaml|yarn\.lock)$|\.min\.js$/;
 
-const repos = process.argv.slice(2);
-if (!repos.length) {
-  console.error("usage: node scripts/languages.mjs <repo> [<repo> ...]");
-  process.exit(1);
+const ROOT = fileURLToPath(new URL("..", import.meta.url));
+const DEFAULT_REPOS = [
+  join(homedir(), "Desktop/EValue"),
+  join(homedir(), "Desktop/첫잔/cheotjan"),
+  join(homedir(), "Desktop/seok05.github.io"),
+  ROOT,
+];
+const repos = process.argv.length > 2 ? process.argv.slice(2) : DEFAULT_REPOS;
+for (const r of repos) {
+  if (!existsSync(join(r, ".git"))) {
+    console.error(`not a git repo: ${r}`);
+    process.exit(1);
+  }
 }
 
 const bytes = {};
@@ -54,5 +65,5 @@ const languages = Object.entries(bytes)
   .sort((a, b) => b[1] - a[1])
   .map(([name, b]) => ({ name, bytes: b, pct: Math.round((b / total) * 1000) / 10, color: COLOR[name] || "#8b949e" }));
 const asOf = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
-writeFileSync("assets/languages.json", JSON.stringify({ asOf, repos: repos.length, totalBytes: total, languages }, null, 2) + "\n");
+writeFileSync(join(ROOT, "assets/languages.json"), JSON.stringify({ asOf, repos: repos.length, totalBytes: total, languages }, null, 2) + "\n");
 console.log(languages.map((l) => `${l.name} ${l.pct}%`).join(" · "));
