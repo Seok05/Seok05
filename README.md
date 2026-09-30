@@ -6,7 +6,6 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 <p>
   <a href="https://seok05.github.io"><img alt="Blog" src="https://img.shields.io/badge/Blog-seok05.github.io-181717?style=for-the-badge&logo=github&logoColor=white"></a>
   <a href="https://orcid.org/0009-0000-7027-4638"><img alt="ORCID" src="https://img.shields.io/badge/ORCID-0009--0000--7027--4638-A6CE39?style=for-the-badge&logo=orcid&logoColor=white"></a>
-  <a href="https://seok05.github.io/feed.xml"><img alt="RSS" src="https://img.shields.io/badge/RSS-feed-FFA500?style=for-the-badge&logo=rss&logoColor=white"></a>
 </p>
 
 ### Projects
