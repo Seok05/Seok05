@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Latest posts + stat cards
+      - name: Latest posts + cards
         run: node scripts/update-blog.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -25,6 +25,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: Seok05
+      - name: Drop the public-only language pie
+        run: node scripts/tidy-3d.mjs
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"

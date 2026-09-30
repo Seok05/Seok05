@@ -1,0 +1,55 @@
+{
+  "asOf": "2026-09-30",
+  "repos": 4,
+  "totalBytes": 2724077,
+  "languages": [
+    {
+      "name": "TypeScript",
+      "bytes": 1992908,
+      "pct": 73.2,
+      "color": "#3178c6"
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 313100,
+      "pct": 11.5,
+      "color": "#f1e05a"
+    },
+    {
+      "name": "Python",
+      "bytes": 280663,
+      "pct": 10.3,
+      "color": "#3572A5"
+    },
+    {
+      "name": "CSS",
+      "bytes": 70511,
+      "pct": 2.6,
+      "color": "#663399"
+    },
+    {
+      "name": "SQL",
+      "bytes": 35166,
+      "pct": 1.3,
+      "color": "#e38c00"
+    },
+    {
+      "name": "HTML",
+      "bytes": 14441,
+      "pct": 0.5,
+      "color": "#e34c26"
+    },
+    {
+      "name": "Prisma",
+      "bytes": 13551,
+      "pct": 0.5,
+      "color": "#0c344b"
+    },
+    {
+      "name": "Shell",
+      "bytes": 3737,
+      "pct": 0.1,
+      "color": "#89e051"
+    }
+  ]
+}
