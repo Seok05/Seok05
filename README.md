@@ -18,26 +18,28 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 - **[Na-ion cathode DFT](https://seok05.github.io/?cat=dft)**: voltages, Jahn-Teller distortion and GGA+U in layered NaMnO₂<br>
   <sub>VASP · pymatgen · CHGNet · Python</sub>
 
-**Research**
+<p>
+  <strong>Research</strong><br>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="VASP" src="https://img.shields.io/badge/VASP-555555?style=flat-square">
+  <img alt="pymatgen" src="https://img.shields.io/badge/pymatgen-2C9C69?style=flat-square">
+  <img alt="CHGNet" src="https://img.shields.io/badge/CHGNet-6f42c1?style=flat-square">
+  <img alt="matplotlib" src="https://img.shields.io/badge/matplotlib-11557c?style=flat-square">
+  <img alt="Bash / PBS" src="https://img.shields.io/badge/Bash%20%2F%20PBS-4EAA25?style=flat-square&logo=gnubash&logoColor=white">
+</p>
 
-<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-<img alt="VASP" src="https://img.shields.io/badge/VASP-555555?style=flat-square">
-<img alt="pymatgen" src="https://img.shields.io/badge/pymatgen-2C9C69?style=flat-square">
-<img alt="CHGNet" src="https://img.shields.io/badge/CHGNet-6f42c1?style=flat-square">
-<img alt="matplotlib" src="https://img.shields.io/badge/matplotlib-11557c?style=flat-square">
-<img alt="Bash / PBS" src="https://img.shields.io/badge/Bash%20%2F%20PBS-4EAA25?style=flat-square&logo=gnubash&logoColor=white">
-
-**Develop**
-
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
-<img alt="React Native" src="https://img.shields.io/badge/React%20Native-20232A?style=flat-square&logo=react&logoColor=61DAFB">
-<img alt="Expo" src="https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white">
-<img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white">
-<img alt="Supabase" src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white">
-<img alt="Prisma" src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white">
-<img alt="SQLite" src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white">
-<img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white">
-<img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
+<p>
+  <strong>Develop</strong><br>
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
+  <img alt="React Native" src="https://img.shields.io/badge/React%20Native-20232A?style=flat-square&logo=react&logoColor=61DAFB">
+  <img alt="Expo" src="https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white">
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white">
+  <img alt="Supabase" src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white">
+  <img alt="Prisma" src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white">
+  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white">
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white">
+  <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
+</p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=3"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=3" width="100%"></picture>
 
