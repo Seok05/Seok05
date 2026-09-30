@@ -1,18 +1,18 @@
 {
   "asOf": "2026-09-30",
   "repos": 4,
-  "totalBytes": 2732002,
+  "totalBytes": 2736538,
   "languages": [
     {
       "name": "TypeScript",
       "bytes": 1992908,
-      "pct": 72.9,
+      "pct": 72.8,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "bytes": 320413,
-      "pct": 11.7,
+      "bytes": 324949,
+      "pct": 11.9,
       "color": "#f1e05a"
     },
     {
@@ -51,5 +51,123 @@
       "pct": 0.2,
       "color": "#89e051"
     }
-  ]
+  ],
+  "perRepo": {
+    "evalue": [
+      {
+        "name": "TypeScript",
+        "bytes": 887571,
+        "pct": 78.3,
+        "color": "#3178c6"
+      },
+      {
+        "name": "Python",
+        "bytes": 197290,
+        "pct": 17.4,
+        "color": "#3572A5"
+      },
+      {
+        "name": "Prisma",
+        "bytes": 13551,
+        "pct": 1.2,
+        "color": "#0c344b"
+      },
+      {
+        "name": "SQL",
+        "bytes": 12033,
+        "pct": 1.1,
+        "color": "#e38c00"
+      },
+      {
+        "name": "JavaScript",
+        "bytes": 10478,
+        "pct": 0.9,
+        "color": "#f1e05a"
+      },
+      {
+        "name": "CSS",
+        "bytes": 9999,
+        "pct": 0.9,
+        "color": "#663399"
+      },
+      {
+        "name": "Shell",
+        "bytes": 3060,
+        "pct": 0.3,
+        "color": "#89e051"
+      }
+    ],
+    "cheotjan": [
+      {
+        "name": "TypeScript",
+        "bytes": 1105337,
+        "pct": 79,
+        "color": "#3178c6"
+      },
+      {
+        "name": "JavaScript",
+        "bytes": 219189,
+        "pct": 15.7,
+        "color": "#f1e05a"
+      },
+      {
+        "name": "Python",
+        "bytes": 35546,
+        "pct": 2.5,
+        "color": "#3572A5"
+      },
+      {
+        "name": "SQL",
+        "bytes": 23133,
+        "pct": 1.7,
+        "color": "#e38c00"
+      },
+      {
+        "name": "HTML",
+        "bytes": 14441,
+        "pct": 1,
+        "color": "#e34c26"
+      },
+      {
+        "name": "Shell",
+        "bytes": 677,
+        "pct": 0,
+        "color": "#89e051"
+      }
+    ],
+    "seok05.github.io": [
+      {
+        "name": "JavaScript",
+        "bytes": 76979,
+        "pct": 41.5,
+        "color": "#f1e05a"
+      },
+      {
+        "name": "CSS",
+        "bytes": 60512,
+        "pct": 32.7,
+        "color": "#663399"
+      },
+      {
+        "name": "Python",
+        "bytes": 47827,
+        "pct": 25.8,
+        "color": "#3572A5"
+      }
+    ],
+    "seok05": [
+      {
+        "name": "JavaScript",
+        "bytes": 18303,
+        "pct": 96.8,
+        "color": "#f1e05a"
+      },
+      {
+        "name": "Shell",
+        "bytes": 612,
+        "pct": 3.2,
+        "color": "#89e051"
+      }
+    ]
+  }
 }

@@ -1,0 +1,45 @@
+{
+  "projects": [
+    {
+      "key": "cheotjan",
+      "name": "Cheotjan",
+      "badge": "Private",
+      "icon": "repo",
+      "repo": "cheotjan",
+      "link": "https://seok05.github.io/?cat=cheotjan",
+      "description": ["A whisky journal app for iOS and Android. Log a", "bottle in seconds, then see what to pour next."],
+      "topics": ["react-native", "expo-router", "supabase"]
+    },
+    {
+      "key": "evalue",
+      "name": "EValue",
+      "badge": "Private",
+      "icon": "repo",
+      "repo": "evalue",
+      "link": "https://seok05.github.io/?cat=evalue",
+      "description": ["Watches used-EV listings every day and prices", "each car against its cohort with quartile bands."],
+      "topics": ["nextjs", "prisma", "sqlite", "scrapers"]
+    },
+    {
+      "key": "dft",
+      "name": "Na-ion cathode DFT",
+      "badge": "Research",
+      "icon": "beaker",
+      "repo": null,
+      "link": "https://seok05.github.io/?cat=dft",
+      "description": ["First-principles study of layered NaMnO₂: voltages,", "Jahn-Teller distortion, GGA+U and ML potentials."],
+      "topics": ["vasp", "pymatgen", "chgnet", "gga+u"],
+      "note": "Runs on an HPC cluster · VASP 6.4 with PBS jobs"
+    },
+    {
+      "key": "blog",
+      "name": "seok05.github.io",
+      "badge": "Public",
+      "icon": "repo",
+      "repo": "seok05.github.io",
+      "link": "https://seok05.github.io",
+      "description": ["Research notes and dev logs, written up the day", "things happen. Static HTML, no build step."],
+      "topics": ["github-pages", "rss", "static-site"]
+    }
+  ]
+}

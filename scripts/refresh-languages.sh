@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 git pull --rebase -q
 node scripts/languages.mjs "$@"
 node scripts/update-blog.mjs --languages
-git add assets/languages.json assets/langs-light.svg assets/langs-dark.svg
+git add assets README.md
 if git diff --cached --quiet; then
   echo "no change, nothing to push"
 else

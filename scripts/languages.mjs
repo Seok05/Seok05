@@ -43,9 +43,18 @@ for (const r of repos) {
   }
 }
 
+const rank = (bytes) => {
+  const total = Object.values(bytes).reduce((a, b) => a + b, 0) || 1;
+  return Object.entries(bytes)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, b]) => ({ name, bytes: b, pct: Math.round((b / total) * 1000) / 10, color: COLOR[name] || "#8b949e" }));
+};
+
 const bytes = {};
+const perRepo = {}; // keyed by folder name, lowercased: evalue, cheotjan, seok05.github.io, seok05
 for (const repo of repos) {
   const isBlog = existsSync(join(repo, "assets", "posts.js"));
+  const mine = {};
   const files = execFileSync("git", ["-C", repo, "ls-files", "-z"]).toString("utf8").split("\0");
   for (const f of files) {
     if (!f || SKIP_DIR.test(f) || SKIP_FILE.test(f)) continue;
@@ -55,15 +64,19 @@ for (const repo of repos) {
     if (ext === ".sql" && /seed/i.test(basename(f))) continue;
     if (isBlog && (f.startsWith("posts/") || /^(index|404)\.html$/.test(f))) continue;
     try {
-      bytes[lang] = (bytes[lang] || 0) + statSync(join(repo, f)).size;
+      const size = statSync(join(repo, f)).size;
+      bytes[lang] = (bytes[lang] || 0) + size;
+      mine[lang] = (mine[lang] || 0) + size;
     } catch {}
   }
+  perRepo[basename(repo.replace(/\/+$/, "")).toLowerCase()] = rank(mine);
 }
 
-const total = Object.values(bytes).reduce((a, b) => a + b, 0);
-const languages = Object.entries(bytes)
-  .sort((a, b) => b[1] - a[1])
-  .map(([name, b]) => ({ name, bytes: b, pct: Math.round((b / total) * 1000) / 10, color: COLOR[name] || "#8b949e" }));
+const languages = rank(bytes);
+const totalBytes = languages.reduce((a, l) => a + l.bytes, 0);
 const asOf = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
-writeFileSync(join(ROOT, "assets/languages.json"), JSON.stringify({ asOf, repos: repos.length, totalBytes: total, languages }, null, 2) + "\n");
+writeFileSync(
+  join(ROOT, "assets/languages.json"),
+  JSON.stringify({ asOf, repos: repos.length, totalBytes, languages, perRepo }, null, 2) + "\n"
+);
 console.log(languages.map((l) => `${l.name} ${l.pct}%`).join(" · "));

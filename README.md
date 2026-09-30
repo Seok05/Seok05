@@ -9,14 +9,12 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
   <a href="https://seok05.github.io/feed.xml"><img alt="RSS" src="https://img.shields.io/badge/RSS-feed-FFA500?style=for-the-badge&logo=rss&logoColor=white"></a>
 </p>
 
-### Currently
+### Projects
 
-- **[Cheotjan](https://seok05.github.io/?cat=cheotjan)**: a whisky journal app for iOS and Android<br>
-  <sub>React Native · Expo Router · TypeScript · Supabase</sub>
-- **[EValue](https://seok05.github.io/?cat=evalue)**: a used-EV price tracker that watches listings every day<br>
-  <sub>Next.js · TypeScript · Prisma · SQLite · Python scrapers</sub>
-- **[Na-ion cathode DFT](https://seok05.github.io/?cat=dft)**: voltages, Jahn-Teller distortion and GGA+U in layered NaMnO₂<br>
-  <sub>VASP · pymatgen · CHGNet · Python</sub>
+<!-- PROJECTS:START -->
+<p><a href="https://seok05.github.io/?cat=cheotjan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-cheotjan-dark.svg?v=a24428f0"><img alt="Cheotjan: A whisky journal app for iOS and Android. Log a bottle in seconds, then see what to pour next." src="assets/project-cheotjan-light.svg?v=35a2e341" width="50%"></picture></a><a href="https://seok05.github.io/?cat=evalue"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-evalue-dark.svg?v=fd34e834"><img alt="EValue: Watches used-EV listings every day and prices each car against its cohort with quartile bands." src="assets/project-evalue-light.svg?v=3c95dfbb" width="50%"></picture></a></p>
+<p><a href="https://seok05.github.io/?cat=dft"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-dft-dark.svg?v=f583c979"><img alt="Na-ion cathode DFT: First-principles study of layered NaMnO₂: voltages, Jahn-Teller distortion, GGA+U and ML potentials." src="assets/project-dft-light.svg?v=b3a9baa7" width="50%"></picture></a><a href="https://seok05.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-blog-dark.svg?v=9eca84fe"><img alt="seok05.github.io: Research notes and dev logs, written up the day things happen. Static HTML, no build step." src="assets/project-blog-light.svg?v=0161b476" width="50%"></picture></a></p>
+<!-- PROJECTS:END -->
 
 <p>
   <strong>Research</strong><br>
@@ -41,11 +39,11 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
   <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
 </p>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=3"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=3" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=29b40a6d"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=987af1e0" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=4"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=4" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=4b1802df"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=2e01a370" width="100%"></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=3"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=3" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-stats-dark.svg?v=3"><img alt="GitHub stats" src="assets/pin-stats-light.svg?v=3" width="50%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=f39834fb"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=ec9de0b3" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-stats-dark.svg?v=a5886e52"><img alt="GitHub stats" src="assets/pin-stats-light.svg?v=40d8e2c5" width="50%"></picture></p>
 
 ### Latest blog posts
 
@@ -57,4 +55,4 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 - `2026-09-27` [DFT 실습 \[7\] — 스핀을 뒤집자 두 구조가 정반대를 골랐다](https://seok05.github.io/posts/dft-practice-7.html)
 <!-- BLOG:END -->
 
-<sub>Posts are in Korean and pulled daily from the blog's RSS. The cards are regenerated every morning by this repo's GitHub Action from the GitHub GraphQL API. Language totals come from a scan of my repositories, public and private, with build output and blog content excluded.</sub>
+<sub>Posts are in Korean and pulled daily from the blog's RSS. The cards are regenerated every morning by this repo's GitHub Action from the GitHub GraphQL API. Project cards open the write-ups for each project. Language totals come from a scan of my repositories, public and private, with build output and blog content excluded.</sub>
