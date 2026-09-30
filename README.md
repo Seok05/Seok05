@@ -43,7 +43,7 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=3"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=3" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-green.svg?v=3"><img alt="3D contribution calendar" src="profile-3d-contrib/profile-green-animate.svg?v=3" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=4"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=4" width="100%"></picture>
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=3"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=3" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-stats-dark.svg?v=3"><img alt="GitHub stats" src="assets/pin-stats-light.svg?v=3" width="50%"></picture></p>
 
@@ -57,4 +57,4 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 - `2026-09-27` [DFT 실습 \[7\] — 스핀을 뒤집자 두 구조가 정반대를 골랐다](https://seok05.github.io/posts/dft-practice-7.html)
 <!-- BLOG:END -->
 
-<sub>Posts are in Korean and pulled daily from the blog's RSS. The cards and the 3D calendar are regenerated every morning by this repo's GitHub Action. Language totals come from a scan of my repositories, public and private, with build output and blog content excluded.</sub>
+<sub>Posts are in Korean and pulled daily from the blog's RSS. The cards are regenerated every morning by this repo's GitHub Action from the GitHub GraphQL API. Language totals come from a scan of my repositories, public and private, with build output and blog content excluded.</sub>
