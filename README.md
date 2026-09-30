@@ -39,7 +39,7 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
   <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
 </p>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=29b40a6d"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=987af1e0" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=769ca896"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=be6c26df" width="100%"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=4b1802df"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=2e01a370" width="100%"></picture>
 

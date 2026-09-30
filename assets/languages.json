@@ -1,24 +1,24 @@
 {
   "asOf": "2026-09-30",
   "repos": 4,
-  "totalBytes": 2736538,
+  "totalBytes": 2748532,
   "languages": [
     {
       "name": "TypeScript",
       "bytes": 1992908,
-      "pct": 72.8,
+      "pct": 72.5,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "bytes": 324949,
-      "pct": 11.9,
+      "bytes": 336993,
+      "pct": 12.3,
       "color": "#f1e05a"
     },
     {
       "name": "Python",
       "bytes": 280663,
-      "pct": 10.3,
+      "pct": 10.2,
       "color": "#3572A5"
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "name": "Shell",
-      "bytes": 4349,
+      "bytes": 4299,
       "pct": 0.2,
       "color": "#89e051"
     }
@@ -158,14 +158,14 @@
     "seok05": [
       {
         "name": "JavaScript",
-        "bytes": 18303,
-        "pct": 96.8,
+        "bytes": 30347,
+        "pct": 98.2,
         "color": "#f1e05a"
       },
       {
         "name": "Shell",
-        "bytes": 612,
-        "pct": 3.2,
+        "bytes": 562,
+        "pct": 1.8,
         "color": "#89e051"
       }
     ]
