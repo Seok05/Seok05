@@ -40,7 +40,7 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=769ca896"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=be6c26df" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=6c34853f"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=c771aff9" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=b9816828"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=54c6d003" width="100%"></picture>
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=57bf117c"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=dae70a3b" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=2377d9ab"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=d3f83f09" width="50%"></picture></p>
 
