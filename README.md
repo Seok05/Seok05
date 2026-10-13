@@ -40,18 +40,18 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=769ca896"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=be6c26df" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=d48ed888"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=e20f1494" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=23c9e8b2"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=42c11aca" width="100%"></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=57bf117c"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=dae70a3b" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=2377d9ab"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=d3f83f09" width="50%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=c9d6296a"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=6b88eb5c" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=7760d28a"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=c7879286" width="50%"></picture></p>
 
 ### Latest blog posts
 
 <!-- BLOG:START -->
+- `2026-10-12` [연구 \[2\] — 540만 가지 배열에서 1,034개의 팔면체로: 고르고, 거르고, 확정하는 법](https://seok05.github.io/posts/research-2.html)
+- `2026-10-12` [연구 \[1\] — 고엔트로피 양극재는 왜 얀-텔러를 누를까: 이웃인가, 비율인가](https://seok05.github.io/posts/research-1.html)
 - `2026-10-02` [DFT 실습 \[12\] — Na₀.₇₅MnO₂는 안정한가: 모든 배치를 계산한 최종 판정](https://seok05.github.io/posts/dft-practice-12.html)
 - `2026-09-30` [DFT 실습 \[11\] — 기계학습 퍼텐셜 CHGNet 검증: 순위는 맞히고 차이는 절반으로](https://seok05.github.io/posts/dft-practice-11.html)
 - `2026-09-30` [DFT 실습 \[10\] — Mn 자리에 Ni 하나: Ni는 2+가 되고 Mn 둘이 반씩 산화됐다](https://seok05.github.io/posts/dft-practice-10.html)
-- `2026-09-28` [DFT 실습 \[9\] — α-NaMnO₂ 전압 계산 총정리: 계산 27개로 본 구조·자성·전압](https://seok05.github.io/posts/dft-practice-9.html)
-- `2026-09-28` [DFT 실습 \[8\] — 얀-텔러 왜곡은 이웃 Mn⁴⁺의 개수를 따랐다](https://seok05.github.io/posts/dft-practice-8.html)
 <!-- BLOG:END -->
 
 <sub>Posts are in Korean and pulled daily from the blog's RSS. The cards are regenerated every morning by this repo's GitHub Action from the GitHub GraphQL API. Project cards open the write-ups for each project. Language totals come from a scan of my repositories, public and private, with build output and blog content excluded.</sub>
