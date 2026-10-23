@@ -40,9 +40,9 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=769ca896"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=be6c26df" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=831a9fa8"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=f65d4280" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=45e2ba18"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=03e9613c" width="100%"></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=06a19fe7"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=902e60ab" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=5a239b24"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=6e55ff00" width="50%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=654edf78"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=a929e16b" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=93394a46"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=aaeea56d" width="50%"></picture></p>
 
 ### Latest blog posts
 
@@ -51,7 +51,7 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 - `2026-10-14` [연구 \[3\] — 엔트로피가 아니라 얀-텔러 이온의 비율이었다: 늘어나는 것은 긴 결합 둘](https://seok05.github.io/posts/research-3.html)
 - `2026-10-12` [연구 \[2\] — 540만 가지 배열에서 1,034개의 팔면체로: 고르고, 거르고, 확정하는 법](https://seok05.github.io/posts/research-2.html)
 - `2026-10-12` [연구 \[1\] — 고엔트로피 양극재는 왜 얀-텔러를 누를까: 엔트로피인가, 얀-텔러 이온의 비율인가](https://seok05.github.io/posts/research-1.html)
-- `2026-10-02` [DFT 실습 \[12\] — Na₀.₇₅MnO₂는 안정한가: 모든 배치를 계산한 최종 판정](https://seok05.github.io/posts/dft-practice-12.html)
+- `2026-10-11` [DFT 실습 \[13\] — 64원자 셀 180건 돌리기: 노드 세 종류로 8.7일](https://seok05.github.io/posts/dft-practice-13.html)
 <!-- BLOG:END -->
 
 <sub>Posts are in Korean and pulled daily from the blog's RSS. The cards are regenerated every morning by this repo's GitHub Action from the GitHub GraphQL API. Project cards open the write-ups for each project. Language totals come from a scan of my repositories, public and private, with build output and blog content excluded.</sub>
