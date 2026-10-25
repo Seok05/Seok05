@@ -1,36 +1,36 @@
 {
-  "asOf": "2026-09-30",
+  "asOf": "2026-10-26",
   "repos": 4,
-  "totalBytes": 2748532,
+  "totalBytes": 2856857,
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 1992908,
-      "pct": 72.5,
+      "bytes": 2061337,
+      "pct": 72.2,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "bytes": 336993,
-      "pct": 12.3,
+      "bytes": 362884,
+      "pct": 12.7,
       "color": "#f1e05a"
     },
     {
       "name": "Python",
-      "bytes": 280663,
-      "pct": 10.2,
+      "bytes": 310428,
+      "pct": 10.9,
       "color": "#3572A5"
     },
     {
       "name": "CSS",
-      "bytes": 70511,
-      "pct": 2.6,
+      "bytes": 54751,
+      "pct": 1.9,
       "color": "#663399"
     },
     {
       "name": "SQL",
       "bytes": 35166,
-      "pct": 1.3,
+      "pct": 1.2,
       "color": "#e38c00"
     },
     {
@@ -100,26 +100,26 @@
     "cheotjan": [
       {
         "name": "TypeScript",
-        "bytes": 1105337,
-        "pct": 79,
+        "bytes": 1173766,
+        "pct": 79.6,
         "color": "#3178c6"
       },
       {
         "name": "JavaScript",
-        "bytes": 219189,
-        "pct": 15.7,
+        "bytes": 227247,
+        "pct": 15.4,
         "color": "#f1e05a"
       },
       {
         "name": "Python",
         "bytes": 35546,
-        "pct": 2.5,
+        "pct": 2.4,
         "color": "#3572A5"
       },
       {
         "name": "SQL",
         "bytes": 23133,
-        "pct": 1.7,
+        "pct": 1.6,
         "color": "#e38c00"
       },
       {
@@ -138,34 +138,34 @@
     "seok05.github.io": [
       {
         "name": "JavaScript",
-        "bytes": 76979,
-        "pct": 41.5,
+        "bytes": 88276,
+        "pct": 41.9,
         "color": "#f1e05a"
       },
       {
-        "name": "CSS",
-        "bytes": 60512,
-        "pct": 32.7,
-        "color": "#663399"
+        "name": "Python",
+        "bytes": 77592,
+        "pct": 36.8,
+        "color": "#3572A5"
       },
       {
-        "name": "Python",
-        "bytes": 47827,
-        "pct": 25.8,
-        "color": "#3572A5"
+        "name": "CSS",
+        "bytes": 44752,
+        "pct": 21.2,
+        "color": "#663399"
       }
     ],
     "seok05": [
       {
         "name": "JavaScript",
-        "bytes": 30347,
-        "pct": 98.2,
+        "bytes": 36883,
+        "pct": 98.5,
         "color": "#f1e05a"
       },
       {
         "name": "Shell",
         "bytes": 562,
-        "pct": 1.8,
+        "pct": 1.5,
         "color": "#89e051"
       }
     ]

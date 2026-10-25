@@ -3,6 +3,9 @@
 I build products by day and run DFT calculations on battery cathode materials by night.
 I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and failed runs included.
 
+Right now I am asking why high-entropy Na layered cathodes suppress the Jahn-Teller distortion.
+Four write-ups in, the answer looks like the Mn³⁺ fraction rather than entropy.
+
 <p>
   <a href="https://seok05.github.io"><img alt="Blog" src="https://img.shields.io/badge/Blog-seok05.github.io-181717?style=for-the-badge&logo=github&logoColor=white"></a>
   <a href="https://orcid.org/0009-0000-7027-4638"><img alt="ORCID" src="https://img.shields.io/badge/ORCID-0009--0000--7027--4638-A6CE39?style=for-the-badge&logo=orcid&logoColor=white"></a>
@@ -11,8 +14,8 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
 ### Projects
 
 <!-- PROJECTS:START -->
-<p><a href="https://seok05.github.io/?cat=cheotjan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-cheotjan-dark.svg?v=a24428f0"><img alt="Cheotjan: A whisky journal app for iOS and Android. Log a bottle in seconds, then see what to pour next." src="assets/project-cheotjan-light.svg?v=35a2e341" width="50%"></picture></a><a href="https://seok05.github.io/?cat=evalue"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-evalue-dark.svg?v=fd34e834"><img alt="EValue: Watches used-EV listings every day and prices each car against its cohort with quartile bands." src="assets/project-evalue-light.svg?v=3c95dfbb" width="50%"></picture></a></p>
-<p><a href="https://seok05.github.io/?cat=dft"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-dft-dark.svg?v=f583c979"><img alt="Na-ion cathode DFT: First-principles study of layered NaMnO₂: voltages, Jahn-Teller distortion, GGA+U and ML potentials." src="assets/project-dft-light.svg?v=b3a9baa7" width="50%"></picture></a><a href="https://seok05.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-blog-dark.svg?v=9eca84fe"><img alt="seok05.github.io: Research notes and dev logs, written up the day things happen. Static HTML, no build step." src="assets/project-blog-light.svg?v=0161b476" width="50%"></picture></a></p>
+<p><a href="https://seok05.github.io/?cat=cheotjan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-cheotjan-dark.svg?v=3818b18f"><img alt="Cheotjan: A whisky journal app for iOS and Android. Log a bottle in seconds, then see what to pour next." src="assets/project-cheotjan-light.svg?v=52c7515e" width="50%"></picture></a><a href="https://seok05.github.io/?cat=evalue"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-evalue-dark.svg?v=fd34e834"><img alt="EValue: Watches used-EV listings every day and prices each car against its cohort with quartile bands." src="assets/project-evalue-light.svg?v=3c95dfbb" width="50%"></picture></a></p>
+<p><a href="https://seok05.github.io/?cat=dft"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-dft-dark.svg?v=d7626a28"><img alt="High-entropy Na cathodes: Why high-entropy doping tames the Jahn-Teller distortion. 180 DFT cells point to the Mn³⁺ fraction." src="assets/project-dft-light.svg?v=3c1d80f3" width="50%"></picture></a><a href="https://seok05.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-blog-dark.svg?v=279a6205"><img alt="seok05.github.io: Research notes and dev logs, written up the day things happen. Static HTML, no build step." src="assets/project-blog-light.svg?v=d01811c8" width="50%"></picture></a></p>
 <!-- PROJECTS:END -->
 
 <p>
@@ -38,20 +41,22 @@ I write up both on [my blog](https://seok05.github.io) (in Korean), numbers and 
   <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
 </p>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=769ca896"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=be6c26df" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=6c5da255"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=039b4297" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=17aa9766"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=0cd0bf43" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=d9bcecaf"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=d5cfa853" width="100%"></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=88aa08fd"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=4f58050f" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=b06fe6ea"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=7eead740" width="50%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=48d16b17"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=3be7f5e5" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=17f38058"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=747a3ba2" width="50%"></picture></p>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/writing-dark.svg?v=e56e36e2"><img alt="Writing: posts on the blog by category and by week" src="assets/writing-light.svg?v=18842946" width="100%"></picture>
 
 ### Latest blog posts
 
 <!-- BLOG:START -->
-- `2026-10-16` [연구 \[4\] — 팔면체 하나의 늘어남이 격자 전체의 변형이 되기까지](https://seok05.github.io/posts/research-4.html)
-- `2026-10-14` [연구 \[3\] — 엔트로피가 아니라 얀-텔러 이온의 비율이었다: 늘어나는 것은 긴 결합 둘](https://seok05.github.io/posts/research-3.html)
-- `2026-10-12` [연구 \[2\] — 540만 가지 배열에서 1,034개의 팔면체로: 고르고, 거르고, 확정하는 법](https://seok05.github.io/posts/research-2.html)
-- `2026-10-12` [연구 \[1\] — 고엔트로피 양극재는 왜 얀-텔러를 누를까: 엔트로피인가, 얀-텔러 이온의 비율인가](https://seok05.github.io/posts/research-1.html)
-- `2026-10-11` [DFT 실습 \[13\] — 64원자 셀 180건 돌리기: 노드 세 종류로 8.7일](https://seok05.github.io/posts/dft-practice-13.html)
+- `2026-10-16` DFT · [연구 \[4\] — 팔면체 하나의 늘어남이 격자 전체의 변형이 되기까지](https://seok05.github.io/posts/research-4.html)
+- `2026-10-14` DFT · [연구 \[3\] — 엔트로피가 아니라 얀-텔러 이온의 비율이었다: 늘어나는 것은 긴 결합 둘](https://seok05.github.io/posts/research-3.html)
+- `2026-10-12` DFT · [연구 \[2\] — 540만 가지 배열에서 1,034개의 팔면체로: 고르고, 거르고, 확정하는 법](https://seok05.github.io/posts/research-2.html)
+- `2026-10-12` DFT · [연구 \[1\] — 고엔트로피 양극재는 왜 얀-텔러를 누를까: 엔트로피인가, 얀-텔러 이온의 비율인가](https://seok05.github.io/posts/research-1.html)
+- `2026-10-11` DFT · [DFT 실습 \[13\] — 64원자 셀 180건 돌리기: 노드 세 종류로 8.7일](https://seok05.github.io/posts/dft-practice-13.html)
 <!-- BLOG:END -->
 
-<sub>Posts are in Korean and pulled daily from the blog's RSS. The cards are regenerated every morning by this repo's GitHub Action from the GitHub GraphQL API. Project cards open the write-ups for each project. Language totals come from a scan of my repositories, public and private, with build output and blog content excluded.</sub>
+<sub>Posts are in Korean. The list and the Writing card are built daily from the blog's own post ledger. The cards are regenerated every morning by this repo's GitHub Action from the GitHub GraphQL API. Project cards open the write-ups for each project. Language totals come from a scan of my repositories, public and private, with build output and blog content excluded.</sub>

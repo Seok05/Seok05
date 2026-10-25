@@ -1,9 +1,10 @@
 /* Daily profile refresh, run by the GitHub Action with GITHUB_TOKEN only.
-   1) latest blog posts from RSS -> README BLOG section
+   1) latest blog posts from the blog's ledger (posts.js; RSS fallback) -> README BLOG section
    2) cards drawn as SVG in GitHub's own palette, light + dark, one grid:
       - project cards from assets/projects.json (+ per-repo languages)
       - most used languages from assets/languages.json
         (both JSON files come from scripts/languages.mjs, run by hand)
+      - writing card (posts by category and by week, from the same ledger)
       - contribution skyline, commits by time of day, contributions by weekday
    3) every README image URL gets ?v=<content hash>, so a changed card is
       never served stale from the browser cache.
@@ -30,6 +31,7 @@ const PAD = IN + 24; // content left edge
 
 // Octicons 16px by GitHub (MIT), inlined so the Action never fetches them
 const ICONS = {
+  "book": ["M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"],
   "beaker": ["M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"],
   "calendar": ["M4.75 0a.75.75 0 0 1 .75.75V2h5V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 0 1 4.75 0ZM2.5 7.5v6.75c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V7.5Zm10.75-4H2.75a.25.25 0 0 0-.25.25V6h11V3.75a.25.25 0 0 0-.25-.25Z"],
   "code": ["m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"],
@@ -96,19 +98,35 @@ async function gql(query) {
 
 let readme = readFileSync("README.md", "utf8");
 
-/* 1) latest posts */
+/* 1) latest posts, from the blog's own ledger (assets/posts.js); RSS is the fallback */
+const BLOG = "https://seok05.github.io";
+const CAT = { dft: "DFT", cheotjan: "Cheotjan", evalue: "EValue", battery: "Battery", paper: "Paper" };
+let ledger = null; // { posts: [{slug, cat, date, title}], since }
 if (!ONLY_LANGUAGES) {
-  const xml = await (await fetch("https://seok05.github.io/feed.xml")).text();
-  const unesc = (s) => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"');
-  const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 5).map(([, it]) => {
-    const pick = (tag) => (it.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`)) || [])[1] || "";
-    const d = new Date(new Date(pick("pubDate")).getTime() + 9 * 3600 * 1000);
-    return { title: unesc(pick("title")), link: pick("link"), date: d.toISOString().slice(0, 10) };
-  });
+  try {
+    const src = await (await fetch(`${BLOG}/assets/posts.js`)).text();
+    const w = {};
+    new Function("window", src)(w);
+    ledger = { posts: w.SEOK.posts, since: w.SEOK.site.since };
+  } catch (e) {
+    console.log("ledger: fetch failed, falling back to RSS", e.message);
+  }
   const mdEscape = (s) => s.replace(/([\[\]])/g, "\\$1");
-  const list = items.map((p) => `- \`${p.date}\` [${mdEscape(p.title)}](${p.link})`).join("\n");
+  let items;
+  if (ledger) {
+    items = ledger.posts.slice(0, 5).map((p) => ({ title: p.title, link: `${BLOG}/posts/${p.slug}.html`, date: p.date.replace(/\./g, "-"), cat: CAT[p.cat] || p.cat }));
+  } else {
+    const xml = await (await fetch(`${BLOG}/feed.xml`)).text();
+    const unesc = (s) => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"');
+    items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 5).map(([, it]) => {
+      const pick = (tag) => (it.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`)) || [])[1] || "";
+      const d = new Date(new Date(pick("pubDate")).getTime() + 9 * 3600 * 1000);
+      return { title: unesc(pick("title")), link: pick("link"), date: d.toISOString().slice(0, 10), cat: "" };
+    });
+  }
+  const list = items.map((p) => `- \`${p.date}\`${p.cat ? ` ${p.cat} ·` : ""} [${mdEscape(p.title)}](${p.link})`).join("\n");
   readme = readme.replace(/<!-- BLOG:START -->[\s\S]*?<!-- BLOG:END -->/, `<!-- BLOG:START -->\n${list}\n<!-- BLOG:END -->`);
-  console.log(`posts: ${items.length}`);
+  console.log(`posts: ${items.length}${ledger ? " (ledger)" : " (rss)"}`);
 }
 
 /* 2a) project cards (no token needed) */
@@ -200,6 +218,75 @@ if (langData) {
     );
   }
   console.log(`languages card: ${langData.languages.slice(0, 3).map((l) => l.name).join(", ")}`);
+}
+
+/* 2b2) writing card: posts by category and by week, from the ledger */
+if (ledger) {
+  const W = 904, H = 236, R = W - PAD;
+  const CATS = ["dft", "cheotjan", "evalue", "battery", "paper"];
+  const CATCOLOR = {
+    light: { dft: "#0969da", cheotjan: "#bf8700", evalue: "#1a7f37", battery: "#cf222e", paper: "#8250df" },
+    dark: { dft: "#4493f8", cheotjan: "#d29922", evalue: "#3fb950", battery: "#f85149", paper: "#a371f7" },
+  };
+  const posts = ledger.posts;
+  const byCat = Object.fromEntries(CATS.map((c) => [c, posts.filter((p) => p.cat === c).length]));
+  const toDate = (s) => new Date(s.replace(/\./g, "-") + "T00:00:00Z");
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const since = toDate(ledger.since);
+  const sinceLabel = `${MON[since.getUTCMonth()]} ${since.getUTCDate()}, ${since.getUTCFullYear()}`;
+  // 12 weeks, Monday to Sunday, ending with the current KST week
+  const now = new Date(Date.now() + 9 * 3600 * 1000);
+  const today = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  const monday = new Date(today.getTime() - ((today.getUTCDay() + 6) % 7) * 86400000);
+  const NW = 12;
+  const weeks = Array.from({ length: NW }, (_, i) => new Date(monday.getTime() - (NW - 1 - i) * 7 * 86400000));
+  const perWeek = weeks.map((w0) => posts.filter((p) => { const t = toDate(p.date).getTime(); return t >= w0.getTime() && t < w0.getTime() + 7 * 86400000; }).length);
+  const peak = Math.max(1, ...perWeek);
+  const inWindow = perWeek.reduce((a, b) => a + b, 0);
+  for (const [suffix, C] of Object.entries(THEMES)) {
+    const col = CATCOLOR[suffix];
+    const big =
+      `<text x="${PAD}" y="118" font-size="46" font-weight="700" fill="${C.ink}" font-family="${MONO}" letter-spacing="-1">${posts.length}</text>` +
+      `<text x="${PAD}" y="146" font-size="13.5" fill="${C.muted}" font-family="${SANS}">posts since ${sinceLabel}</text>`;
+    const segs = CATS.filter((c) => byCat[c] > 0).map((c) => ({ name: CAT[c], pct: byCat[c], color: col[c] }));
+    const barW = 400;
+    let lx = PAD;
+    const legend = segs
+      .map((l) => {
+        const w = 12 + l.name.length * 7.2 + 6 + String(l.pct).length * 7.4;
+        const g =
+          dot(C, (lx + 5).toFixed(1), 197, 5, l.color) +
+          `<text x="${(lx + 15).toFixed(1)}" y="201.5" font-size="12.5" fill="${C.ink}" font-family="${SANS}">${esc(l.name)}` +
+          `<tspan dx="5" font-size="12" font-weight="600" fill="${C.muted}" font-family="${MONO}">${l.pct}</tspan></text>`;
+        lx += w + 16;
+        return g;
+      })
+      .join("");
+    const catBar = langBar(segs, PAD, 166, barW, 8, "wb") + legend;
+    // right: posts per week
+    const X0 = 500, plotW = R - X0, colW = plotW / NW, bw = Math.min(22, colW - 8), base = 188, maxH = 76;
+    const starts = [];
+    weeks.forEach((w0, i) => { const m = w0.getUTCMonth(); if (!starts.length || starts[starts.length - 1].m !== m) starts.push({ i, m }); });
+    if (starts.length > 1 && starts[1].i - starts[0].i < 2) starts.shift();
+    const bars = perWeek
+      .map((n, i) => {
+        const h = n ? Math.max(4, Math.round((n / peak) * maxH)) : 3;
+        const x = X0 + i * colW + (colW - bw) / 2;
+        const on = n === peak && n > 0;
+        const lab = starts.find((s) => s.i === i);
+        return (
+          `<rect x="${x.toFixed(1)}" y="${base - maxH}" width="${bw.toFixed(1)}" height="${maxH}" rx="3" fill="${C.track}"/>` +
+          `<rect x="${x.toFixed(1)}" y="${base - h}" width="${bw.toFixed(1)}" height="${h}" rx="3" fill="${on ? C.accent : C.faint}"/>` +
+          (n ? `<text x="${(x + bw / 2).toFixed(1)}" y="${base - h - 6}" font-size="12" font-family="${MONO}" fill="${on ? C.ink : C.muted}" font-weight="${on ? 700 : 400}" text-anchor="middle">${n}</text>` : "") +
+          (lab ? `<text x="${x.toFixed(1)}" y="${base + 18}" font-size="12" font-family="${MONO}" fill="${C.faint}">${MON[lab.m]}</text>` : "")
+        );
+      })
+      .join("");
+    const head = `<text x="${X0}" y="78" font-size="13.5" font-weight="600" fill="${C.ink}" font-family="${SANS}">Posts per week</text>` +
+      `<text x="${R}" y="78" font-size="12" fill="${C.faint}" font-family="${MONO}" text-anchor="end">${inWindow} in ${NW} weeks</text>`;
+    writeFileSync(`assets/writing-${suffix}.svg`, card(C, W, H, { title: "Writing", glyph: "book", note: "seok05.github.io" }, big + catBar + head + bars));
+  }
+  console.log(`writing card: ${posts.length} posts, ${CATS.map((c) => `${CAT[c]} ${byCat[c]}`).join(" / ")}, last ${NW} weeks ${perWeek.join(",")}`);
 }
 
 /* 2c) activity cards (need the token) */
