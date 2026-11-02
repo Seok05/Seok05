@@ -43,9 +43,9 @@ Four write-ups in, the answer looks like the Mn³⁺ fraction rather than entrop
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=6c5da255"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=039b4297" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=8d035247"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=2dc99bb5" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=02a4a7b6"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=6890a791" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/writing-dark.svg?v=e56e36e2"><img alt="Writing: posts on the blog by category and by week" src="assets/writing-light.svg?v=18842946" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/writing-dark.svg?v=029e4c94"><img alt="Writing: posts on the blog by category and by week" src="assets/writing-light.svg?v=b6e33661" width="100%"></picture>
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=1215b78d"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=58866264" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=313bab40"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=1d9197cb" width="50%"></picture></p>
 
