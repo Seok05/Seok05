@@ -43,7 +43,7 @@ Four write-ups in, the answer looks like the Mn³⁺ fraction rather than entrop
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=6c5da255"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=039b4297" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=f58bb865"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=c0240051" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=784efcad"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=6a02f789" width="100%"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/writing-dark.svg?v=029e4c94"><img alt="Writing: posts on the blog by category and by week" src="assets/writing-light.svg?v=b6e33661" width="100%"></picture>
 
