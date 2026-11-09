@@ -1,54 +1,54 @@
 {
-  "asOf": "2026-10-26",
+  "asOf": "2026-11-09",
   "repos": 4,
-  "totalBytes": 2856857,
+  "totalBytes": 3218197,
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 2061337,
-      "pct": 72.2,
+      "bytes": 2404111,
+      "pct": 74.7,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "bytes": 362884,
-      "pct": 12.7,
+      "bytes": 379476,
+      "pct": 11.8,
       "color": "#f1e05a"
     },
     {
       "name": "Python",
       "bytes": 310428,
-      "pct": 10.9,
+      "pct": 9.6,
       "color": "#3572A5"
     },
     {
       "name": "CSS",
       "bytes": 54751,
-      "pct": 1.9,
+      "pct": 1.7,
       "color": "#663399"
     },
     {
       "name": "SQL",
-      "bytes": 35166,
-      "pct": 1.2,
+      "bytes": 35943,
+      "pct": 1.1,
       "color": "#e38c00"
     },
     {
       "name": "HTML",
-      "bytes": 14441,
+      "bytes": 15638,
       "pct": 0.5,
       "color": "#e34c26"
     },
     {
       "name": "Prisma",
       "bytes": 13551,
-      "pct": 0.5,
+      "pct": 0.4,
       "color": "#0c344b"
     },
     {
       "name": "Shell",
       "bytes": 4299,
-      "pct": 0.2,
+      "pct": 0.1,
       "color": "#89e051"
     }
   ],
@@ -100,32 +100,32 @@
     "cheotjan": [
       {
         "name": "TypeScript",
-        "bytes": 1173766,
-        "pct": 79.6,
+        "bytes": 1516540,
+        "pct": 82.6,
         "color": "#3178c6"
       },
       {
         "name": "JavaScript",
-        "bytes": 227247,
-        "pct": 15.4,
+        "bytes": 243839,
+        "pct": 13.3,
         "color": "#f1e05a"
       },
       {
         "name": "Python",
         "bytes": 35546,
-        "pct": 2.4,
+        "pct": 1.9,
         "color": "#3572A5"
       },
       {
         "name": "SQL",
-        "bytes": 23133,
-        "pct": 1.6,
+        "bytes": 23910,
+        "pct": 1.3,
         "color": "#e38c00"
       },
       {
         "name": "HTML",
-        "bytes": 14441,
-        "pct": 1,
+        "bytes": 15638,
+        "pct": 0.9,
         "color": "#e34c26"
       },
       {
