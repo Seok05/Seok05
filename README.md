@@ -41,7 +41,7 @@ Four write-ups in, the answer looks like the Mn³⁺ fraction rather than entrop
   <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
 </p>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=1d81eaf8"><img alt="Most used languages: TypeScript 73%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=759ba2c0" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=1d81eaf8"><img alt="Most used languages: TypeScript 75%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=759ba2c0" width="100%"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=bcd21cb9"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=65c57333" width="100%"></picture>
 

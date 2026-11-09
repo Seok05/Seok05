@@ -218,6 +218,9 @@ if (langData) {
     );
   }
   console.log(`languages card: ${langData.languages.slice(0, 3).map((l) => l.name).join(", ")}`);
+  // keep the README alt text in step with the card
+  const top3 = langData.languages.slice(0, 3).map((l) => `${l.name} ${Math.round(l.pct)}%`).join(", ");
+  readme = readme.replace(/alt="Most used languages:[^"]*"/, `alt="Most used languages: ${top3}"`);
 }
 
 /* 2b2) writing card: posts by category and by week, from the ledger */
