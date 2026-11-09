@@ -1,30 +1,30 @@
 {
-  "asOf": "2026-11-09",
+  "asOf": "2026-11-10",
   "repos": 4,
-  "totalBytes": 3218197,
+  "totalBytes": 3324824,
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 2404111,
-      "pct": 74.7,
+      "bytes": 2506829,
+      "pct": 75.4,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "bytes": 379476,
-      "pct": 11.8,
+      "bytes": 383385,
+      "pct": 11.5,
       "color": "#f1e05a"
     },
     {
       "name": "Python",
       "bytes": 310428,
-      "pct": 9.6,
+      "pct": 9.3,
       "color": "#3572A5"
     },
     {
       "name": "CSS",
       "bytes": 54751,
-      "pct": 1.7,
+      "pct": 1.6,
       "color": "#663399"
     },
     {
@@ -100,32 +100,32 @@
     "cheotjan": [
       {
         "name": "TypeScript",
-        "bytes": 1516540,
-        "pct": 82.6,
+        "bytes": 1619258,
+        "pct": 83.4,
         "color": "#3178c6"
       },
       {
         "name": "JavaScript",
-        "bytes": 243839,
-        "pct": 13.3,
+        "bytes": 247492,
+        "pct": 12.7,
         "color": "#f1e05a"
       },
       {
         "name": "Python",
         "bytes": 35546,
-        "pct": 1.9,
+        "pct": 1.8,
         "color": "#3572A5"
       },
       {
         "name": "SQL",
         "bytes": 23910,
-        "pct": 1.3,
+        "pct": 1.2,
         "color": "#e38c00"
       },
       {
         "name": "HTML",
         "bytes": 15638,
-        "pct": 0.9,
+        "pct": 0.8,
         "color": "#e34c26"
       },
       {
@@ -158,7 +158,7 @@
     "seok05": [
       {
         "name": "JavaScript",
-        "bytes": 36883,
+        "bytes": 37139,
         "pct": 98.5,
         "color": "#f1e05a"
       },

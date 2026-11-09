@@ -14,7 +14,7 @@ Four write-ups in, the answer looks like the Mn³⁺ fraction rather than entrop
 ### Projects
 
 <!-- PROJECTS:START -->
-<p><a href="https://seok05.github.io/?cat=cheotjan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-cheotjan-dark.svg?v=adc3e0a5"><img alt="Cheotjan: A whisky journal app for iOS and Android. Log a bottle in seconds, then see what to pour next." src="assets/project-cheotjan-light.svg?v=babde4a9" width="50%"></picture></a><a href="https://seok05.github.io/?cat=evalue"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-evalue-dark.svg?v=fd34e834"><img alt="EValue: Watches used-EV listings every day and prices each car against its cohort with quartile bands." src="assets/project-evalue-light.svg?v=3c95dfbb" width="50%"></picture></a></p>
+<p><a href="https://seok05.github.io/?cat=cheotjan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-cheotjan-dark.svg?v=dec35e7d"><img alt="Cheotjan: A whisky journal app for iOS and Android. Log a bottle in seconds, then see what to pour next." src="assets/project-cheotjan-light.svg?v=cb3a0a3c" width="50%"></picture></a><a href="https://seok05.github.io/?cat=evalue"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-evalue-dark.svg?v=fd34e834"><img alt="EValue: Watches used-EV listings every day and prices each car against its cohort with quartile bands." src="assets/project-evalue-light.svg?v=3c95dfbb" width="50%"></picture></a></p>
 <p><a href="https://seok05.github.io/?cat=dft"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-dft-dark.svg?v=d7626a28"><img alt="High-entropy Na cathodes: Why high-entropy doping tames the Jahn-Teller distortion. 180 DFT cells point to the Mn³⁺ fraction." src="assets/project-dft-light.svg?v=3c1d80f3" width="50%"></picture></a><a href="https://seok05.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-blog-dark.svg?v=279a6205"><img alt="seok05.github.io: Research notes and dev logs, written up the day things happen. Static HTML, no build step." src="assets/project-blog-light.svg?v=d01811c8" width="50%"></picture></a></p>
 <!-- PROJECTS:END -->
 
@@ -41,11 +41,11 @@ Four write-ups in, the answer looks like the Mn³⁺ fraction rather than entrop
   <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
 </p>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=1d81eaf8"><img alt="Most used languages: TypeScript 75%, JavaScript 12%, Python 10%" src="assets/langs-light.svg?v=759ba2c0" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=704baa3f"><img alt="Most used languages: TypeScript 75%, JavaScript 12%, Python 9%" src="assets/langs-light.svg?v=3b977a2f" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=bcd21cb9"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=65c57333" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=5bed20c4"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=ecfbdd12" width="100%"></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=1215b78d"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=58866264" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=a413cf11"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=79c29958" width="50%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=89d29e0a"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=fd58d1da" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=9c635672"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=f6bd368e" width="50%"></picture></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/writing-dark.svg?v=5f2650d7"><img alt="Writing: posts on the blog by category and by week" src="assets/writing-light.svg?v=75939471" width="100%"></picture>
 
