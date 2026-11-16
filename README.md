@@ -43,11 +43,11 @@ Four write-ups in, the answer looks like the Mn³⁺ fraction rather than entrop
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg?v=704baa3f"><img alt="Most used languages: TypeScript 75%, JavaScript 12%, Python 9%" src="assets/langs-light.svg?v=3b977a2f" width="100%"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=554f2a9d"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=a2b77845" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=3f729d17"><img alt="Contribution skyline: recent weeks as 3D bars, with streak stats" src="assets/skyline-light.svg?v=46f2e85a" width="100%"></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=64390a8c"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=67d4d11c" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=7725c351"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=aa9f1823" width="50%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-time-dark.svg?v=64390a8c"><img alt="Commits by time of day" src="assets/pin-time-light.svg?v=67d4d11c" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/pin-week-dark.svg?v=db1b23d9"><img alt="Contributions by day of week" src="assets/pin-week-light.svg?v=df26dd3b" width="50%"></picture></p>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/writing-dark.svg?v=5f2650d7"><img alt="Writing: posts on the blog by category and by week" src="assets/writing-light.svg?v=75939471" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/writing-dark.svg?v=3d9cc9d0"><img alt="Writing: posts on the blog by category and by week" src="assets/writing-light.svg?v=efa00bb7" width="100%"></picture>
 
 ### Latest blog posts
 
